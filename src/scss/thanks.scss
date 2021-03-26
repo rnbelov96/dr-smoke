@@ -1,0 +1,77 @@
+@import './lib/reboot.scss';
+@import './lib/fonts.scss';
+@import './base/variables.scss';
+@import './base/mixins.scss';
+@import './base/global.scss';
+
+.thanks,
+.error {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  &__body {
+    @include bg;
+    // background-image: url('/src/img/bgs/desc-bg.png');
+    background-attachment: fixed;
+  }
+  &__body,
+  &__html {
+    height: 100%;
+  }
+  &__header {
+    flex: 0 0 auto;
+    padding-top: 20px;
+  }
+  .container {
+    max-width: 1144px;
+  }
+  footer {
+    flex: 0 0 auto;
+  }
+  &__content {
+    flex: 1 0 auto;
+    padding: 40px 0;
+    .container {
+      height: 100%;
+    }
+  }
+  &__content-wrapper {
+    height: 100%;
+    align-items: center;
+    display: flex;
+  }
+  &__content-box {
+    width: 100%;
+  }
+  &__title {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    color: $black;
+  }
+  &__user-name {
+    text-transform: uppercase;
+  }
+  &__subtitle {
+    color: $black;
+    margin-top: 40px;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &__link {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &__btn-box {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.error {
+  &__btn-box {
+    margin-top: 20px;
+  }
+}

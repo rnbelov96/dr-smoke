@@ -1,0 +1,47 @@
+.input-error {
+  border: solid #ce211f 1px;
+
+  & + svg {
+    path,
+    rect {
+      fill: #ce211f;
+    }
+  }
+
+  color: #ce211f;
+
+  &::-webkit-input-placeholder {
+    color: #ce211f;
+  }
+
+  &::-moz-placeholder {
+    color: #ce211f;
+  }
+
+  &:-ms-input-placeholder {
+    color: #ce211f;
+  }
+
+  &:-moz-placeholder {
+    color: #ce211f;
+  }
+
+  &:hover,
+  &:focus {
+    &::-webkit-input-placeholder {
+      color: #ce211f;
+    }
+
+    &::-moz-placeholder {
+      color: #ce211f;
+    }
+
+    &:-ms-input-placeholder {
+      color: #ce211f;
+    }
+
+    &:-moz-placeholder {
+      color: #ce211f;
+    }
+  }
+}
