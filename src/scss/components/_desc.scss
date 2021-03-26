@@ -1,6 +1,5 @@
 .desc {
   min-height: 1000px;
-  padding-bottom: 50px;
 
   background-color: black;
 }
@@ -33,6 +32,8 @@
 .desc__title {
   margin-bottom: 40px;
 
+  text-transform: uppercase;
+
   @include h1;
   color: white;
 
@@ -41,7 +42,7 @@
   }
 
   @media (max-width: 575px) {
-    font-size: 25px;
+    font-size: 23px;
     margin-bottom: 28px;
   }
 }
