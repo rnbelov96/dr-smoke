@@ -1,0 +1,60 @@
+.owner {
+  position: relative;
+
+  min-height: 1140px;
+  padding-top: 100px;
+
+  @media (max-width: 1350px) {
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+}
+
+.owner__content {
+  width: 100%;
+  max-width: 690px;
+  margin-left: auto;
+
+  @media (max-width: 1350px) {
+    margin-right: auto;
+  }
+}
+
+.owner__title {
+  margin-bottom: 35px;
+
+  @include h2;
+  text-transform: uppercase;
+  color: black;
+
+  @media (max-width: 575px) {
+    text-align: center;
+    font-size: 22px;
+  }
+}
+
+.owner__text {
+  margin-bottom: 35px;
+
+  @include h4;
+  color: black;
+
+  @media (max-width: 575px) {
+    font-size: 14px;
+  }
+}
+
+.owner__photo {
+  position: absolute;
+  z-index: -1;
+
+  left: 20px;
+  top: 100px;
+
+  @media (max-width: 1350px) {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+  }
+}

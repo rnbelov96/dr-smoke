@@ -3,79 +3,81 @@ export {};
 
 const rangeElList = document.querySelectorAll('.js-range');
 
-const foodcupRange = document.querySelector(
-  '.js-foodcup-range',
+const cellsRange = document.querySelector(
+  '.js-cells-range',
 ) as HTMLInputElement;
-const coffeeRange = document.querySelector(
-  '.js-coffee-range',
+const pointsRange = document.querySelector(
+  '.js-points-range',
 ) as HTMLInputElement;
-const snackRange = document.querySelector(
-  '.js-snack-range',
-) as HTMLInputElement;
-const deliveryRange = document.querySelector(
-  '.js-delivery-range',
-) as HTMLInputElement;
-const freezeRange = document.querySelector(
-  '.js-freeze-range',
+const checkInput = document.querySelector(
+  '.js-check-input',
 ) as HTMLInputElement;
 
-const incomeLabelEl = document.querySelector('.js-income-result') as HTMLSpanElement;
-const profitLabelElList = document.querySelectorAll('.js-profit-result');
+const resultLabelElList = document.querySelectorAll('.js-calc-result');
 
-const FOODCUP_CHECK_VALUE = 149;
-const COFFEE_CHECK_VALUE = 149;
-const SNACK_CHECK_VALUE = 159;
-const DELIVERY_CHECK_VALUE = 195;
-const FREEZE_CHECK_VALUE = 1000;
+let result: number;
 
-let income: number;
-let profit: number;
+let cellsCurrentStep = 2;
+let pointsCurrentStep = 2;
 
-const calcIncome = () => {
-  income = (Number(foodcupRange.value) * FOODCUP_CHECK_VALUE
-      + Number(coffeeRange.value) * COFFEE_CHECK_VALUE
-      + Number(snackRange.value) * SNACK_CHECK_VALUE
-      + Number(deliveryRange.value) * DELIVERY_CHECK_VALUE
-      + Number(freezeRange.value) * FREEZE_CHECK_VALUE)
-    * 30;
-  incomeLabelEl.textContent = income.toLocaleString();
-};
+const cellsEndpoints = [...document.querySelectorAll('.js-cells-endpoints .calc__endpoint')];
+const pointsEndpoints = [...document.querySelectorAll('.js-points-endpoints .calc__endpoint')];
 
-const calcProfit = () => {
-  profit = Math.round(income * 0.496);
-  profitLabelElList.forEach(el => {
-    el.textContent = profit.toLocaleString();
+const calcResult = () => {
+  result = (Number(cellsRange.value) * Number(pointsRange.value) * Number(checkInput.value)) * 30;
+  resultLabelElList.forEach(el => {
+    el.textContent = result.toLocaleString();
   });
 };
 
-calcIncome();
-calcProfit();
+calcResult();
 
 rangeElList.forEach(el => {
   const rangeEl = el as HTMLInputElement;
 
   const steps = (Number(rangeEl.max) - Number(rangeEl.min)) / Number(rangeEl.step);
 
-  const currentStep = Number(rangeEl.value) / Number(rangeEl.step) - 1;
+  const currentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
 
-  rangeEl.style.background = `linear-gradient(to right, #6DB900 0%, #6DB900 ${String(
+  rangeEl.style.background = `linear-gradient(to right, #EF7D30 0%, #EF7D30 ${String(
     (currentStep / steps) * 100,
-  )}%, #353b41 ${String((currentStep / steps) * 100)}%, #353b41 100%)`;
+  )}%, #f2f4f8 ${String((currentStep / steps) * 100)}%, #f2f4f8 100%)`;
 });
 
-rangeElList.forEach(el => {
-  el.addEventListener('input', e => {
-    const rangeEl = e.currentTarget as HTMLInputElement;
+cellsRange.addEventListener('input', e => {
+  const rangeEl = e.currentTarget as HTMLInputElement;
 
-    const steps = (Number(rangeEl.max) - Number(rangeEl.min)) / Number(rangeEl.step);
+  const steps = (Number(rangeEl.max) - Number(rangeEl.min)) / Number(rangeEl.step);
 
-    const currentStep = Number(rangeEl.value) / Number(rangeEl.step) - 1;
+  cellsEndpoints[cellsCurrentStep].classList.remove('calc__endpoint_active');
 
-    rangeEl.style.background = `linear-gradient(to right, #6DB900 0%, #6DB900 ${String(
-      (currentStep / steps) * 100,
-    )}%, #353b41 ${String((currentStep / steps) * 100)}%, #353b41 100%)`;
+  cellsCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
 
-    calcIncome();
-    calcProfit();
-  });
+  cellsEndpoints[cellsCurrentStep].classList.add('calc__endpoint_active');
+
+  rangeEl.style.background = `linear-gradient(to right, #EF7D30 0%, #EF7D30 ${String(
+    (cellsCurrentStep / steps) * 100,
+  )}%, #f2f4f8 ${String((cellsCurrentStep / steps) * 100)}%, #f2f4f8 100%)`;
+
+  calcResult();
 });
+
+pointsRange.addEventListener('input', e => {
+  const rangeEl = e.currentTarget as HTMLInputElement;
+
+  const steps = (Number(rangeEl.max) - Number(rangeEl.min)) / Number(rangeEl.step);
+
+  pointsEndpoints[pointsCurrentStep].classList.remove('calc__endpoint_active');
+
+  pointsCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
+
+  pointsEndpoints[pointsCurrentStep].classList.add('calc__endpoint_active');
+
+  rangeEl.style.background = `linear-gradient(to right, #EF7D30 0%, #EF7D30 ${String(
+    (pointsCurrentStep / steps) * 100,
+  )}%, #f2f4f8 ${String((pointsCurrentStep / steps) * 100)}%, #f2f4f8 100%)`;
+
+  calcResult();
+});
+
+checkInput.addEventListener('input', calcResult);

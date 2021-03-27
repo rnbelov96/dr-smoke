@@ -13,6 +13,10 @@
       min-height: 100px;
     }
   }
+
+  &_modal-form {
+    width: 100%;
+  }
 }
 
 .button {
@@ -39,6 +43,11 @@
     #ec7423 76.61%,
     #ef7d30 100%
   );
+
+  &_modal-form {
+    font-size: 18px;
+    line-height: 21px;
+  }
 }
 
 .button__bg {

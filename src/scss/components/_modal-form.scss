@@ -1,0 +1,74 @@
+.modal-form {
+  position: relative;
+  z-index: 1;
+  padding-top: 35px;
+  padding-bottom: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  border: 2px solid #f2f4f8;
+  border-radius: 30px;
+  background-color: white;
+}
+
+.modal-form__title {
+  margin-bottom: 20px;
+
+  font-size: 24px;
+  text-align: center;
+  line-height: 31px;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.modal-form__input-list {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.modal-form__input-box {
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+
+  background-color: $white;
+}
+
+.modal-form__input-label {
+  margin-bottom: 5px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #c4c4c4;
+}
+
+.modal-form__input {
+  width: 100%;
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: $dark-grey;
+  font-size: 20px;
+  line-height: 23px;
+
+  border: 0px;
+  background-color: transparent;
+
+  &::-webkit-input-placeholder {
+    color: $dark-grey;
+  }
+
+  &::-moz-placeholder {
+    color: $dark-grey;
+  }
+
+  &:-ms-input-placeholder {
+    color: $dark-grey;
+  }
+
+  &:-moz-placeholder {
+    color: $dark-grey;
+  }
+}

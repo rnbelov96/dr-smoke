@@ -72,7 +72,7 @@
             </li>
           </ul>
 
-          <form action="" class="line-form">
+          <form class="line-form">
             <div class="line-form__input-list">
               <div class="line-form__input-box">
                 <div class="line-form__input-content">
@@ -217,7 +217,11 @@
               </p>
             </li>
             <li class="formats__item">
-              <img src="./img/market-2.jpg" alt="Точка в торговом центре" class="formats__photo" />
+              <img
+                src="./img/market-2.jpg"
+                alt="Точка в торговом центре"
+                class="formats__photo"
+              />
               <h3 class="formats__item-title">Точка в торговом центре</h3>
               <p class="formats__item-text">
                 Точки Dr. Smoke работают в ТЦ, где располагаются магазины
@@ -226,6 +230,1102 @@
               </p>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <section class="owner">
+        <div class="container container_owner">
+          <div class="owner__content">
+            <img
+              class="owner__photo"
+              src="./img/owner.png"
+              alt="Основатель компании"
+            />
+            <h2 class="owner__title">Обращение основателя компании</h2>
+            <p class="owner__text">
+              Добрый день! Меня зовут Владимир, я основатель сети магазинов Dr.
+              Smoke. Вот уже 2 года наша команда ежедневно радует покупателей и
+              развивает кальянную культуру в Амурской области. В данный момент
+              Dr.Smoke выходит на новый этап и ищет партнёров в новых городах.
+            </p>
+            <p class="owner__text">
+              Наш бренд — это не просто бизнес, а семья единомышленников. Если
+              вы неравнодушны к кальянам, цените высокий уровень сервиса,
+              педантичны и ответственно подходите к управлению бизнесом, то
+              давайте приступим к обсуждению партнёрства.
+            </p>
+            <form class="modal-form">
+              <h3 class="modal-form__title">
+                Получить полное описание бизнеса
+              </h3>
+              <div class="modal-form__input-list">
+                <div class="modal-form__input-box">
+                  <div class="modal-form__input-content">
+                    <label for="name-owner" class="modal-form__input-label"
+                      >Ваше имя</label
+                    >
+                    <input
+                      id="name-owner"
+                      type="text"
+                      class="modal-form__input"
+                      placeholder="Сергей"
+                      data-type="name"
+                      name="name"
+                    />
+                  </div>
+                </div>
+                <div class="modal-form__input-box">
+                  <div class="modal-form__input-content">
+                    <label for="phone-owner" class="modal-form__input-label"
+                      >Телефон</label
+                    ><input
+                      id="phone-owner"
+                      type="text"
+                      class="line-form__input"
+                      placeholder="+7 (924) 000 0000"
+                      data-type="phone"
+                      name="phone"
+                    />
+                  </div>
+                </div>
+                <div class="modal-form__input-box">
+                  <div class="modal-form__input-content">
+                    <label for="email-owner" class="modal-form__input-label"
+                      >Email</label
+                    ><input
+                      id="email-owner"
+                      type="email"
+                      class="modal-form__input"
+                      placeholder="design@mail.ru"
+                      data-type="email"
+                      name="email"
+                    />
+                  </div>
+                </div>
+                <div class="button__wrapper button__wrapper_modal-form">
+                  <button type="submit" class="button button_modal-form">
+                    Получить подробный бизнес-план
+                  </button>
+                  <div class="button__bg button__bg_modal-form"></div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="calc">
+        <div class="container">
+          <h2 class="calc__title">
+            <span class="orange">Сделайте расчёт</span> для вашего города —
+            <span class="orange">спланируйте бюджет</span>
+          </h2>
+          <div class="calc__content">
+            <div class="calc__wrapper">
+              <h3 class="calc__subtitle">спланировать бюджет</h3>
+              <div class="calc__input-box">
+                <label class="calc__input-label">Средний чек</label>
+                <input
+                  type="number"
+                  value="500"
+                  class="calc__input-text js-check-input"
+                />
+              </div>
+              <div class="calc__input-box">
+                <label class="calc__input-label">Количество продаж</label>
+                <div class="calc__endpoints js-cells-endpoints">
+                  <div class="calc__endpoint">1200</div>
+                  <div class="calc__endpoint">1500</div>
+                  <div class="calc__endpoint calc__endpoint_active">1800</div>
+                  <div class="calc__endpoint">2100</div>
+                  <div class="calc__endpoint">2400</div>
+                </div>
+                <input
+                  type="range"
+                  min="1200"
+                  max="2400"
+                  step="300"
+                  class="calc__input-range js-range js-cells-range"
+                />
+              </div>
+              <div class="calc__input-box">
+                <label class="calc__input-label">Количество точек</label>
+                <div class="calc__endpoints js-points-endpoints">
+                  <div class="calc__endpoint">1</div>
+                  <div class="calc__endpoint">2</div>
+                  <div class="calc__endpoint calc__endpoint_active">3</div>
+                  <div class="calc__endpoint">4</div>
+                  <div class="calc__endpoint">5</div>
+                </div>
+                <input
+                  type="range"
+                  min="1"
+                  max="5"
+                  step="1"
+                  class="calc__input-range js-range js-points-range"
+                />
+              </div>
+              <div class="calc__result-box">
+                <p class="calc__result-caption">Чистая прибыль</p>
+                <p class="calc__result">
+                  <span class="js-calc-result">100 000</span>₽
+                </p>
+              </div>
+              <div class="calc__end"></div>
+            </div>
+          </div>
+          <form class="line-form">
+            <h3 class="line-form__title">
+              <span class="orange">Оставьте заявку</span>, чтобы получить план
+              выхода на прибыль
+              <span class="orange"
+                ><span class="js-calc-result">100 000</span> рублей в
+                месяц</span
+              >
+            </h3>
+            <div class="line-form__input-list">
+              <div class="line-form__input-box">
+                <div class="line-form__input-content">
+                  <label for="name-calc" class="line-form__input-label"
+                    >Ваше имя</label
+                  >
+                  <input
+                    id="name-calc"
+                    type="text"
+                    class="line-form__input"
+                    placeholder="Сергей"
+                    data-type="name"
+                    name="name"
+                  />
+                </div>
+              </div>
+              <div class="line-form__input-box">
+                <div class="line-form__input-content">
+                  <label for="phone-calc" class="line-form__input-label"
+                    >Телефон</label
+                  ><input
+                    id="phone-calc"
+                    type="text"
+                    class="line-form__input"
+                    placeholder="+7 (924) 000 0000"
+                    data-type="phone"
+                    name="phone"
+                  />
+                </div>
+              </div>
+              <div class="line-form__input-box">
+                <div class="line-form__input-content">
+                  <label for="email-calc" class="line-form__input-label"
+                    >Email</label
+                  ><input
+                    id="email-calc"
+                    type="email"
+                    class="line-form__input"
+                    placeholder="design@mail.ru"
+                    data-type="email"
+                    name="email"
+                  />
+                </div>
+              </div>
+              <div class="button__wrapper button__wrapper_line-form">
+                <button type="submit" class="button button_line-form">
+                  Получить
+                </button>
+                <div class="button__bg"></div>
+              </div>
+            </div>
+            <p class="line-form__policy">
+              Я подтверждаю, что ознакомлен, и даю согласие на обработку
+              персональных данных на условиях <br />
+              и для целей, определяемых
+              <button type="button" class="line-form__policy-btn js-policy">
+                Политикой конфиденциальности
+              </button>
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <section class="stock">
+        <div class="container">
+          <h2 class="stock__title">
+            Оптимальная <span class="orange">ассортиментная матрица</span> и
+            поставки с нашей стороны для отстройки от конкурентов
+          </h2>
+          <p class="stock__subtitle">
+            Фокус на продукте помогает нам обходить конкурентов и приносить
+            покупателям реальное удовольствие
+          </p>
+          <div class="stock__text-box">
+            <p class="stock__text">
+              Проверяем каждую единицу товара по 10–12 критериям(в зависимости
+              от вида товара), чтобы гарантировать свежесть, аромат и
+              безопасность
+            </p>
+            <p class="stock__text">
+              Следим, чтобы в ассортименте присутствовала продукция популярных
+              отечественных и зарубежных брендов, для привлечения внимания
+              покупателей
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="marks">
+        <div class="container">
+          <h2 class="marks__title">
+            Продукты <span class="orange">Dr. Smoke</span> клиенты сразу
+            выделяют среди других, потому что они приятнее в использовании
+          </h2>
+          <p class="marks__subtitle">
+            Для честной оценки мы предложили клиентам проверить на практике
+            продукцию Dr. Smoke с продукцией из обычного магазина
+          </p>
+          <div class="marks__table-wrapper">
+            <div class="marks__table">
+              <div class="marks__column">
+                <div class="marks__cell">Категория</div>
+                <div class="marks__cell">Удобство мытья</div>
+                <div class="marks__cell">Лёгкость приготовления</div>
+                <div class="marks__cell">Вкус</div>
+                <div class="marks__cell">Длительность использования</div>
+              </div>
+              <div class="marks__column">
+                <div class="marks__cell">Продукция Dr. Smoke</div>
+                <div class="marks__cell">10/10</div>
+                <div class="marks__cell">10/10</div>
+                <div class="marks__cell">10/10</div>
+                <div class="marks__cell">10/10</div>
+              </div>
+              <div class="marks__column">
+                <div class="marks__cell">Продукция обычного магазина</div>
+                <div class="marks__cell">7/10</div>
+                <div class="marks__cell">8/10</div>
+                <div class="marks__cell">6/10</div>
+                <div class="marks__cell">7/10</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="profits">
+        <div class="container">
+          <h2 class="profits__title"><span class="orange">12 выгод</span> для франчайзи <span class="orange">Dr. Smoke</span></h2>
+          <section class="profits__slider">
+            <div class="profits__slider-wrapper">
+              <div class="profits__items-box">
+                <ul class="profits__list">
+                  <li class="profits__item">
+                    <p class="profits__item-number">01</p>
+                    <h3 class="profits__item-title">Поиск помещения</h3>
+                    <p class="profits__item-text">
+                      Дадим подробные рекомендации по выбору площади для
+                      магазина в вашем городе.
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">02</p>
+                    <h3 class="profits__item-title">Дизайн под ключ</h3>
+                    <p class="profits__item-text">
+                      Передаём макеты стеллажей, вывесок, оформления и наружной
+                      рекламы
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">03</p>
+                    <h3 class="profits__item-title">Комплект документов</h3>
+                    <p class="profits__item-text">
+                      Договоры, акты, отчётность и всё необходимое для быстрого
+                      и верного решения бюрократических вопросов
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">04</p>
+                    <h3 class="profits__item-title">Очное обучение</h3>
+                    <p class="profits__item-text">
+                      В течение 2–5 дней в Благовещенске погружаем вас во все
+                      нюансы бизнеса
+                    </p>
+                  </li>
+                </ul>
+                <ul class="profits__list">
+                  <li class="profits__item">
+                    <p class="profits__item-number">01</p>
+                    <h3 class="profits__item-title">Поиск помещения</h3>
+                    <p class="profits__item-text">
+                      Дадим подробные рекомендации по выбору площади для
+                      магазина в вашем городе.
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">02</p>
+                    <h3 class="profits__item-title">Дизайн под ключ</h3>
+                    <p class="profits__item-text">
+                      Передаём макеты стеллажей, вывесок, оформления и наружной
+                      рекламы
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">03</p>
+                    <h3 class="profits__item-title">Комплект документов</h3>
+                    <p class="profits__item-text">
+                      Договоры, акты, отчётность и всё необходимое для быстрого
+                      и верного решения бюрократических вопросов
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">04</p>
+                    <h3 class="profits__item-title">Очное обучение</h3>
+                    <p class="profits__item-text">
+                      В течение 2–5 дней в Благовещенске погружаем вас во все
+                      нюансы бизнеса
+                    </p>
+                  </li>
+                </ul>
+                <ul class="profits__list">
+                  <li class="profits__item">
+                    <p class="profits__item-number">01</p>
+                    <h3 class="profits__item-title">Поиск помещения</h3>
+                    <p class="profits__item-text">
+                      Дадим подробные рекомендации по выбору площади для
+                      магазина в вашем городе.
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">02</p>
+                    <h3 class="profits__item-title">Дизайн под ключ</h3>
+                    <p class="profits__item-text">
+                      Передаём макеты стеллажей, вывесок, оформления и наружной
+                      рекламы
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">03</p>
+                    <h3 class="profits__item-title">Комплект документов</h3>
+                    <p class="profits__item-text">
+                      Договоры, акты, отчётность и всё необходимое для быстрого
+                      и верного решения бюрократических вопросов
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">04</p>
+                    <h3 class="profits__item-title">Очное обучение</h3>
+                    <p class="profits__item-text">
+                      В течение 2–5 дней в Благовещенске погружаем вас во все
+                      нюансы бизнеса
+                    </p>
+                  </li>
+                </ul>
+                <ul class="profits__list">
+                  <li class="profits__item">
+                    <p class="profits__item-number">01</p>
+                    <h3 class="profits__item-title">Поиск помещения</h3>
+                    <p class="profits__item-text">
+                      Дадим подробные рекомендации по выбору площади для
+                      магазина в вашем городе.
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">02</p>
+                    <h3 class="profits__item-title">Дизайн под ключ</h3>
+                    <p class="profits__item-text">
+                      Передаём макеты стеллажей, вывесок, оформления и наружной
+                      рекламы
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">03</p>
+                    <h3 class="profits__item-title">Комплект документов</h3>
+                    <p class="profits__item-text">
+                      Договоры, акты, отчётность и всё необходимое для быстрого
+                      и верного решения бюрократических вопросов
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">04</p>
+                    <h3 class="profits__item-title">Очное обучение</h3>
+                    <p class="profits__item-text">
+                      В течение 2–5 дней в Благовещенске погружаем вас во все
+                      нюансы бизнеса
+                    </p>
+                  </li>
+                </ul>
+                <ul class="profits__list">
+                  <li class="profits__item">
+                    <p class="profits__item-number">01</p>
+                    <h3 class="profits__item-title">Поиск помещения</h3>
+                    <p class="profits__item-text">
+                      Дадим подробные рекомендации по выбору площади для
+                      магазина в вашем городе.
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">02</p>
+                    <h3 class="profits__item-title">Дизайн под ключ</h3>
+                    <p class="profits__item-text">
+                      Передаём макеты стеллажей, вывесок, оформления и наружной
+                      рекламы
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">03</p>
+                    <h3 class="profits__item-title">Комплект документов</h3>
+                    <p class="profits__item-text">
+                      Договоры, акты, отчётность и всё необходимое для быстрого
+                      и верного решения бюрократических вопросов
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">04</p>
+                    <h3 class="profits__item-title">Очное обучение</h3>
+                    <p class="profits__item-text">
+                      В течение 2–5 дней в Благовещенске погружаем вас во все
+                      нюансы бизнеса
+                    </p>
+                  </li>
+                </ul>
+                <ul class="profits__list">
+                  <li class="profits__item">
+                    <p class="profits__item-number">01</p>
+                    <h3 class="profits__item-title">Поиск помещения</h3>
+                    <p class="profits__item-text">
+                      Дадим подробные рекомендации по выбору площади для
+                      магазина в вашем городе.
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">02</p>
+                    <h3 class="profits__item-title">Дизайн под ключ</h3>
+                    <p class="profits__item-text">
+                      Передаём макеты стеллажей, вывесок, оформления и наружной
+                      рекламы
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">03</p>
+                    <h3 class="profits__item-title">Комплект документов</h3>
+                    <p class="profits__item-text">
+                      Договоры, акты, отчётность и всё необходимое для быстрого
+                      и верного решения бюрократических вопросов
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">04</p>
+                    <h3 class="profits__item-title">Очное обучение</h3>
+                    <p class="profits__item-text">
+                      В течение 2–5 дней в Благовещенске погружаем вас во все
+                      нюансы бизнеса
+                    </p>
+                  </li>
+                </ul>
+                <ul class="profits__list">
+                  <li class="profits__item">
+                    <p class="profits__item-number">01</p>
+                    <h3 class="profits__item-title">Поиск помещения</h3>
+                    <p class="profits__item-text">
+                      Дадим подробные рекомендации по выбору площади для
+                      магазина в вашем городе.
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">02</p>
+                    <h3 class="profits__item-title">Дизайн под ключ</h3>
+                    <p class="profits__item-text">
+                      Передаём макеты стеллажей, вывесок, оформления и наружной
+                      рекламы
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">03</p>
+                    <h3 class="profits__item-title">Комплект документов</h3>
+                    <p class="profits__item-text">
+                      Договоры, акты, отчётность и всё необходимое для быстрого
+                      и верного решения бюрократических вопросов
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">04</p>
+                    <h3 class="profits__item-title">Очное обучение</h3>
+                    <p class="profits__item-text">
+                      В течение 2–5 дней в Благовещенске погружаем вас во все
+                      нюансы бизнеса
+                    </p>
+                  </li>
+                </ul>
+                <ul class="profits__list">
+                  <li class="profits__item">
+                    <p class="profits__item-number">01</p>
+                    <h3 class="profits__item-title">Поиск помещения</h3>
+                    <p class="profits__item-text">
+                      Дадим подробные рекомендации по выбору площади для
+                      магазина в вашем городе.
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">02</p>
+                    <h3 class="profits__item-title">Дизайн под ключ</h3>
+                    <p class="profits__item-text">
+                      Передаём макеты стеллажей, вывесок, оформления и наружной
+                      рекламы
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">03</p>
+                    <h3 class="profits__item-title">Комплект документов</h3>
+                    <p class="profits__item-text">
+                      Договоры, акты, отчётность и всё необходимое для быстрого
+                      и верного решения бюрократических вопросов
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">04</p>
+                    <h3 class="profits__item-title">Очное обучение</h3>
+                    <p class="profits__item-text">
+                      В течение 2–5 дней в Благовещенске погружаем вас во все
+                      нюансы бизнеса
+                    </p>
+                  </li>
+                </ul>
+                <ul class="profits__list">
+                  <li class="profits__item">
+                    <p class="profits__item-number">01</p>
+                    <h3 class="profits__item-title">Поиск помещения</h3>
+                    <p class="profits__item-text">
+                      Дадим подробные рекомендации по выбору площади для
+                      магазина в вашем городе.
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">02</p>
+                    <h3 class="profits__item-title">Дизайн под ключ</h3>
+                    <p class="profits__item-text">
+                      Передаём макеты стеллажей, вывесок, оформления и наружной
+                      рекламы
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">03</p>
+                    <h3 class="profits__item-title">Комплект документов</h3>
+                    <p class="profits__item-text">
+                      Договоры, акты, отчётность и всё необходимое для быстрого
+                      и верного решения бюрократических вопросов
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">04</p>
+                    <h3 class="profits__item-title">Очное обучение</h3>
+                    <p class="profits__item-text">
+                      В течение 2–5 дней в Благовещенске погружаем вас во все
+                      нюансы бизнеса
+                    </p>
+                  </li>
+                </ul>
+                <ul class="profits__list">
+                  <li class="profits__item">
+                    <p class="profits__item-number">01</p>
+                    <h3 class="profits__item-title">Поиск помещения</h3>
+                    <p class="profits__item-text">
+                      Дадим подробные рекомендации по выбору площади для
+                      магазина в вашем городе.
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">02</p>
+                    <h3 class="profits__item-title">Дизайн под ключ</h3>
+                    <p class="profits__item-text">
+                      Передаём макеты стеллажей, вывесок, оформления и наружной
+                      рекламы
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">03</p>
+                    <h3 class="profits__item-title">Комплект документов</h3>
+                    <p class="profits__item-text">
+                      Договоры, акты, отчётность и всё необходимое для быстрого
+                      и верного решения бюрократических вопросов
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">04</p>
+                    <h3 class="profits__item-title">Очное обучение</h3>
+                    <p class="profits__item-text">
+                      В течение 2–5 дней в Благовещенске погружаем вас во все
+                      нюансы бизнеса
+                    </p>
+                  </li>
+                </ul>
+                <ul class="profits__list">
+                  <li class="profits__item">
+                    <p class="profits__item-number">01</p>
+                    <h3 class="profits__item-title">Поиск помещения</h3>
+                    <p class="profits__item-text">
+                      Дадим подробные рекомендации по выбору площади для
+                      магазина в вашем городе.
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">02</p>
+                    <h3 class="profits__item-title">Дизайн под ключ</h3>
+                    <p class="profits__item-text">
+                      Передаём макеты стеллажей, вывесок, оформления и наружной
+                      рекламы
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">03</p>
+                    <h3 class="profits__item-title">Комплект документов</h3>
+                    <p class="profits__item-text">
+                      Договоры, акты, отчётность и всё необходимое для быстрого
+                      и верного решения бюрократических вопросов
+                    </p>
+                  </li>
+                  <li class="profits__item">
+                    <p class="profits__item-number">04</p>
+                    <h3 class="profits__item-title">Очное обучение</h3>
+                    <p class="profits__item-text">
+                      В течение 2–5 дней в Благовещенске погружаем вас во все
+                      нюансы бизнеса
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <button
+              class="profits__btn-prev"
+              aria-label="Предыдущий слайд"
+              type="button"
+            ></button>
+            <button
+              class="profits__btn-next"
+              aria-label="Следующий слайд"
+              type="button"
+            ></button>
+          </section>
+          <form class="line-form line-form_formats">
+            <h3 class="line-form__title">
+              <span class="orange">Зарабатывайте от 100 000 рублей</span> на любимом деле 
+Откройте свой бизнес вместе <span class="orange">с Dr. Smoke</span>
+            </h3>
+            <div class="line-form__input-list">
+              <div class="line-form__input-box">
+                <div class="line-form__input-content">
+                  <label for="name-profits" class="line-form__input-label"
+                    >Ваше имя</label
+                  >
+                  <input
+                    id="name-profits"
+                    type="text"
+                    class="line-form__input"
+                    placeholder="Сергей"
+                    data-type="name"
+                    name="name"
+                  />
+                </div>
+              </div>
+              <div class="line-form__input-box">
+                <div class="line-form__input-content">
+                  <label for="phone-profits" class="line-form__input-label"
+                    >Телефон</label
+                  ><input
+                    id="phone-profits"
+                    type="text"
+                    class="line-form__input"
+                    placeholder="+7 (924) 000 0000"
+                    data-type="phone"
+                    name="phone"
+                  />
+                </div>
+              </div>
+              <div class="line-form__input-box">
+                <div class="line-form__input-content">
+                  <label for="email-profits" class="line-form__input-label"
+                    >Email</label
+                  ><input
+                    id="email-profits"
+                    type="email"
+                    class="line-form__input"
+                    placeholder="design@mail.ru"
+                    data-type="email"
+                    name="email"
+                  />
+                </div>
+              </div>
+              <div class="button__wrapper button__wrapper_line-form">
+                <button type="submit" class="button button_line-form">
+                  Стать партнёром
+                </button>
+                <div class="button__bg"></div>
+              </div>
+            </div>
+            <p class="line-form__policy">
+              Я подтверждаю, что ознакомлен, и даю согласие на обработку
+              персональных данных на условиях <br />
+              и для целей, определяемых
+              <button type="button" class="line-form__policy-btn js-policy">
+                Политикой конфиденциальности
+              </button>
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <section class="shops">
+        <div class="container">
+          <h2 class="shops__title">Вдохновитесь опытом 4 существующих точек</h2>
+          <p class="shops__text">Кейсы по текущим точкам с цифрами</p>
+          <section class="shops__slider">
+            <div class="shops__slider-wrapper">
+              <div class="shops__items-box">
+                <div class="shops__item">
+                  <div class="shops__photo-box">
+                    <h3 class="shops__item-title">Магазин 1 (Благовещенск)</h3>
+                    <img src="./img/gallery/shop-1.jpg" alt="Магазин DR SMOKE" class="shops__photo">
+                  </div>
+                  <div class="shops__stats-box">
+                    <div class="shops__stats-left-column">
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Инвестиции — 1 200 000₽</p>
+                      </div>
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Окупаемость — 5 мес.</p>
+                      </div>
+                    </div>
+                    <div class="shops__stats-right-column">
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Посетителей в день — 20-150 человек</p>
+                      </div>
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Выручка в месяц — от 500 000₽</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="shops__item">
+                  <div class="shops__photo-box">
+                    <h3 class="shops__item-title">Магазин 2 (Благовещенск)</h3>
+                    <img src="./img/gallery/shop-2.jpg" alt="Магазин DR SMOKE" class="shops__photo">
+                  </div>
+                  <div class="shops__stats-box">
+                    <div class="shops__stats-left-column">
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Инвестиции — 1 200 000₽</p>
+                      </div>
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Окупаемость — 5 мес.</p>
+                      </div>
+                    </div>
+                    <div class="shops__stats-right-column">
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Посетителей в день — 20-150 человек</p>
+                      </div>
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Выручка в месяц — от 500 000₽</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="shops__item">
+                  <div class="shops__photo-box">
+                    <h3 class="shops__item-title">Магазин 1 (Благовещенск)</h3>
+                    <img src="./img/gallery/shop-1.jpg" alt="Магазин DR SMOKE" class="shops__photo">
+                  </div>
+                  <div class="shops__stats-box">
+                    <div class="shops__stats-left-column">
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Инвестиции — 1 200 000₽</p>
+                      </div>
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Окупаемость — 5 мес.</p>
+                      </div>
+                    </div>
+                    <div class="shops__stats-right-column">
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Посетителей в день — 20-150 человек</p>
+                      </div>
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Выручка в месяц — от 500 000₽</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="shops__item">
+                  <div class="shops__photo-box">
+                    <h3 class="shops__item-title">Магазин 2 (Благовещенск)</h3>
+                    <img src="./img/gallery/shop-2.jpg" alt="Магазин DR SMOKE" class="shops__photo">
+                  </div>
+                  <div class="shops__stats-box">
+                    <div class="shops__stats-left-column">
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Инвестиции — 1 200 000₽</p>
+                      </div>
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Окупаемость — 5 мес.</p>
+                      </div>
+                    </div>
+                    <div class="shops__stats-right-column">
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Посетителей в день — 20-150 человек</p>
+                      </div>
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Выручка в месяц — от 500 000₽</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="shops__item">
+                  <div class="shops__photo-box">
+                    <h3 class="shops__item-title">Магазин 1 (Благовещенск)</h3>
+                    <img src="./img/gallery/shop-1.jpg" alt="Магазин DR SMOKE" class="shops__photo">
+                  </div>
+                  <div class="shops__stats-box">
+                    <div class="shops__stats-left-column">
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Инвестиции — 1 200 000₽</p>
+                      </div>
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Окупаемость — 5 мес.</p>
+                      </div>
+                    </div>
+                    <div class="shops__stats-right-column">
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Посетителей в день — 20-150 человек</p>
+                      </div>
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Выручка в месяц — от 500 000₽</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="shops__item">
+                  <div class="shops__photo-box">
+                    <h3 class="shops__item-title">Магазин 2 (Благовещенск)</h3>
+                    <img src="./img/gallery/shop-2.jpg" alt="Магазин DR SMOKE" class="shops__photo">
+                  </div>
+                  <div class="shops__stats-box">
+                    <div class="shops__stats-left-column">
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Инвестиции — 1 200 000₽</p>
+                      </div>
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Окупаемость — 5 мес.</p>
+                      </div>
+                    </div>
+                    <div class="shops__stats-right-column">
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Посетителей в день — 20-150 человек</p>
+                      </div>
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Выручка в месяц — от 500 000₽</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="shops__item">
+                  <div class="shops__photo-box">
+                    <h3 class="shops__item-title">Магазин 1 (Благовещенск)</h3>
+                    <img src="./img/gallery/shop-1.jpg" alt="Магазин DR SMOKE" class="shops__photo">
+                  </div>
+                  <div class="shops__stats-box">
+                    <div class="shops__stats-left-column">
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Инвестиции — 1 200 000₽</p>
+                      </div>
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Окупаемость — 5 мес.</p>
+                      </div>
+                    </div>
+                    <div class="shops__stats-right-column">
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Посетителей в день — 20-150 человек</p>
+                      </div>
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Выручка в месяц — от 500 000₽</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="shops__item">
+                  <div class="shops__photo-box">
+                    <h3 class="shops__item-title">Магазин 2 (Благовещенск)</h3>
+                    <img src="./img/gallery/shop-2.jpg" alt="Магазин DR SMOKE" class="shops__photo">
+                  </div>
+                  <div class="shops__stats-box">
+                    <div class="shops__stats-left-column">
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Инвестиции — 1 200 000₽</p>
+                      </div>
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Окупаемость — 5 мес.</p>
+                      </div>
+                    </div>
+                    <div class="shops__stats-right-column">
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Посетителей в день — 20-150 человек</p>
+                      </div>
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Выручка в месяц — от 500 000₽</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="shops__item">
+                  <div class="shops__photo-box">
+                    <h3 class="shops__item-title">Магазин 1 (Благовещенск)</h3>
+                    <img src="./img/gallery/shop-1.jpg" alt="Магазин DR SMOKE" class="shops__photo">
+                  </div>
+                  <div class="shops__stats-box">
+                    <div class="shops__stats-left-column">
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Инвестиции — 1 200 000₽</p>
+                      </div>
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Окупаемость — 5 мес.</p>
+                      </div>
+                    </div>
+                    <div class="shops__stats-right-column">
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Посетителей в день — 20-150 человек</p>
+                      </div>
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Выручка в месяц — от 500 000₽</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="shops__item">
+                  <div class="shops__photo-box">
+                    <h3 class="shops__item-title">Магазин 2 (Благовещенск)</h3>
+                    <img src="./img/gallery/shop-2.jpg" alt="Магазин DR SMOKE" class="shops__photo">
+                  </div>
+                  <div class="shops__stats-box">
+                    <div class="shops__stats-left-column">
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Инвестиции — 1 200 000₽</p>
+                      </div>
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Окупаемость — 5 мес.</p>
+                      </div>
+                    </div>
+                    <div class="shops__stats-right-column">
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Посетителей в день — 20-150 человек</p>
+                      </div>
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Выручка в месяц — от 500 000₽</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="shops__item">
+                  <div class="shops__photo-box">
+                    <h3 class="shops__item-title">Магазин 1 (Благовещенск)</h3>
+                    <img src="./img/gallery/shop-1.jpg" alt="Магазин DR SMOKE" class="shops__photo">
+                  </div>
+                  <div class="shops__stats-box">
+                    <div class="shops__stats-left-column">
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Инвестиции — 1 200 000₽</p>
+                      </div>
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Окупаемость — 5 мес.</p>
+                      </div>
+                    </div>
+                    <div class="shops__stats-right-column">
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Посетителей в день — 20-150 человек</p>
+                      </div>
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Выручка в месяц — от 500 000₽</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="shops__item">
+                  <div class="shops__photo-box">
+                    <h3 class="shops__item-title">Магазин 2 (Благовещенск)</h3>
+                    <img src="./img/gallery/shop-2.jpg" alt="Магазин DR SMOKE" class="shops__photo">
+                  </div>
+                  <div class="shops__stats-box">
+                    <div class="shops__stats-left-column">
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Инвестиции — 1 200 000₽</p>
+                      </div>
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Окупаемость — 5 мес.</p>
+                      </div>
+                    </div>
+                    <div class="shops__stats-right-column">
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Посетителей в день — 20-150 человек</p>
+                      </div>
+                      <div class="shops__stat">
+                        <div class="shops__stat-icon"></div>
+                        <p class="shops__stat-text">Выручка в месяц — от 500 000₽</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="shops__btn-prev"
+              aria-label="Предыдущий слайд"
+              type="button"
+            ></button>
+            <button
+              class="shops__btn-next"
+              aria-label="Следующий слайд"
+              type="button"
+            ></button>
+          </section>
         </div>
       </section>
     </main>

@@ -1,0 +1,85 @@
+.stock {
+  min-height: 1140px;
+  padding-top: 140px;
+
+  background-color: $black;
+  background-image: url('/src/img/bgs/stock-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @media (max-width: 991px) {
+    padding-top: 90px;
+    background-image: url('/src/img/bgs/stock-without-card-bg.jpg');
+    background-size: cover;
+    min-height: 840px;
+  }
+
+  @media (max-width: 575px) {
+    padding-top: 45px;
+    min-height: 890px;
+  }
+}
+
+.stock__title {
+  margin-bottom: 35px;
+  width: 100%;
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include h2;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+
+  @media (max-width: 767px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 18px;
+    line-height: 40px;
+  }
+}
+
+.stock__subtitle {
+  width: 100%;
+  max-width: 910px;
+  margin-bottom: 100px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include h3;
+  color: white;
+  text-align: center;
+
+  @media (max-width: 767px) {
+    font-size: 18px;
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 16px;
+    margin-bottom: 60px;
+  }
+}
+
+.stock__text {
+  padding-left: 35px;
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 640px;
+
+  @include h4;
+  color: white;
+
+  border-left: 2px solid $orange;
+
+  &:last-child {
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+  }
+}

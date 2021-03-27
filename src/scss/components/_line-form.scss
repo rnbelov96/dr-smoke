@@ -15,6 +15,26 @@
   }
 }
 
+.line-form__title {
+  margin-bottom: 35px;
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  @include h2;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (max-width: 767px) {
+    font-size: 30px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 26px;
+  }
+}
+
 .line-form__input-list {
   display: flex;
   margin-bottom: 30px;
@@ -100,7 +120,7 @@
 .line-form__policy-btn {
   background-color: transparent;
   padding: 0px;
-  
+
   color: #afb1b6;
   text-decoration: underline;
 

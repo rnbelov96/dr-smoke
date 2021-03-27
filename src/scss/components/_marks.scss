@@ -1,0 +1,145 @@
+.marks {
+  padding-top: 140px;
+  padding-bottom: 186px;
+  min-height: 940px;
+
+  @media (max-width: 991px) {
+    padding-bottom: 150px;
+  }
+
+  @media (max-width: 575px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.marks__title {
+  width: 100%;
+  max-width: 1170px;
+  margin-bottom: 35px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include h2;
+  text-transform: uppercase;
+  color: black;
+  text-align: center;
+
+  @media (max-width: 767px) {
+    font-size: 25px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 18px;
+  }
+}
+
+.marks__subtitle {
+  width: 100%;
+  max-width: 1170px;
+  margin-bottom: 70px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include h3;
+  color: $dark-grey;
+  text-align: center;
+
+  @media (max-width: 767px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 15px;
+  }
+}
+
+.marks__table-wrapper {
+  padding: 30px;
+  
+  background: #ffffff;
+  box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 37px/133px;
+
+  @media (max-width: 767px) {
+    padding: 0;
+  }
+
+  @media (max-width: 575px) {
+    border-radius: 0;
+  }
+}
+
+.marks__table {
+  display: flex;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 30px;
+
+  border: 1px solid #71757d3f;
+  border-radius: 37px/133px;
+
+  @media (max-width: 991px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (max-width: 575px) {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 0;
+  }
+}
+
+.marks__column {
+  &:nth-child(1) {
+    width: 45%;
+  }
+
+  &:nth-child(2) {
+    width: 25%;
+
+    text-align: center;
+  }
+
+  &:nth-child(3 ) {
+    width: 30%;
+
+    text-align: center;
+  }
+}
+
+.marks__cell {
+  margin-bottom: 20px;
+  @include h4;
+  color: black;
+
+  @media (max-width: 767px) {
+    font-size: 13px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 9px;
+  }
+
+  &:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+
+    text-align: center;
+    @include h3;
+
+    @media (max-width: 767px) {
+      font-size: 18px;
+    }
+    @media (max-width: 575px) {
+      font-size: 11px;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,160 @@
+.profits {
+  min-height: 1153px;
+  padding-top: 140px;
+  padding-bottom: 130px;
+}
+
+.profits__title {
+  margin-bottom: 30px;
+
+  @include h2;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (max-width: 575px) {
+    font-size: 28px;
+  }
+}
+
+.profits__slider {
+  position: relative;
+  z-index: 1;
+
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 1170px;
+  
+  @media (max-width: 575px) {
+    width: 100%;
+  }
+}
+
+.profits__slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 40px;
+}
+
+.profits__items-box {
+  display: flex;
+  justify-content: space-between;
+  transform: translate3d(-400%, 0, 0);
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.profits__list {
+  padding: 0;
+  list-style: none;
+  margin-bottom: 0;
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.profits__item {
+  position: relative;
+  width: 49%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 10px;
+  margin-bottom: 60px;
+
+  background: #ffffff;
+  border: 2px solid #f2f4f8;
+  border-radius: 20px;
+
+  &:hover .profits__item-number {
+    color: $orange;
+  }
+
+  @media (max-width: 575px) {
+    padding-left: 10px;
+  }
+}
+
+.profits__item-number {
+  position: absolute;
+  z-index: -1;
+  left: 61px;
+  top: -57px;
+
+  font-size: 64px;
+  font-weight: bold;
+  line-height: 83px;
+  color: #f2f4f8;
+
+  @media (max-width: 575px) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.profits__item-title {
+  @include h3;
+  margin-bottom: 20px;
+
+  @media (max-width: 575px) {
+    font-size: 18px;
+  }
+}
+
+.profits__item-text {
+  margin-bottom: 0;
+
+  @include h4;
+  color: $dark-grey;
+
+  @media (max-width: 575px) {
+    font-size: 12px;
+  }
+}
+
+.profits__btn-next, .profits__btn-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-70%);
+
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  @include bg;
+
+  @media (max-width: 767px) {
+    top: 48%;
+  }
+
+  @media (max-width: 575px) {
+    display: none;
+  }
+}
+
+.profits__btn-prev {
+  left: -60px;
+  background-image: url("/src/img/icons/arrow-left.png"); 
+
+  @media (max-width: 767px) {
+    left: -40px;
+  }
+}
+
+.profits__btn-next {
+  right: -60px;
+  background-image: url("/src/img/icons/arrow-right.png");
+
+  @media (max-width: 767px) {
+    right: -40px;
+  }
+}
+
