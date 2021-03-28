@@ -27,7 +27,7 @@ const validateForm = form => {
 
   if (
     phoneInputEl.value !== ''
-    && !validator.isMobilePhone(`${phoneInputEl.value.replace(/\(|\)|-|_/g, '')}`, 'ru-RU')
+    && !validator.isMobilePhone(`${phoneInputEl.value.replace(/\(|\)|-|_|\s/g, '')}`, 'ru-RU')
   ) {
     phoneInputEl.classList.add('input-error');
     isOk = false;
@@ -126,20 +126,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   ymaps.ready(() => {
     document.formData.city = ymaps.geolocation.city || '';
-    console.log(document.formData);
   });
 
   const x = new Date();
   document.formData.timezone = (-1 * x.getTimezoneOffset()) / 60;
-
-  console.log(document.formData);
 
   const formsList = document.querySelectorAll('form');
 
   formsList.forEach(form => {
     form.addEventListener('submit', async e => {
       e.preventDefault();
-      console.log(form);
       if (!validateForm(form)) {
         return;
       }
@@ -152,8 +148,6 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       if (document.formData.name === undefined) document.formData.name = window.location.hostname;
-
-      console.log(document.formData);
 
       const data = JSON.stringify(document.formData);
 
@@ -174,16 +168,12 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      console.log(await response.text());
-
       if (
         document.f5leads.expect_second_form === '1'
         && form.classList.contains('secondform')
       ) {
-        console.log('second form submitted');
         if (document.f5leads.onSubmitSecondForm !== undefined) document.f5leads.onSubmitSecondForm(form);
       } else {
-        console.log('first form submitted');
         localStorage.lastFirstFormData = JSON.stringify(document.formData);
         if (document.f5leads.onSubmitFirstForm !== undefined) document.f5leads.onSubmitFirstForm(form);
       }

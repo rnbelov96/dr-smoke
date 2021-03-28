@@ -30,6 +30,7 @@
   width: 100%;
   min-height: 100px;
 
+  font-family: 'Intro';
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
@@ -61,4 +62,8 @@
   background: linear-gradient(270.71deg, #7a3303 0%, #ef7d30 98.77%);
   box-shadow: 0px 30px 40px rgba(236, 116, 35, 0.3);
   border-radius: 10px;
+
+  &_thanks {
+    box-shadow: none;
+  }
 }

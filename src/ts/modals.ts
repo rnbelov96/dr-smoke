@@ -16,12 +16,19 @@ const openModal = (modalEl: HTMLDivElement) => {
 };
 
 const modalElList = document.querySelectorAll('.modal');
-const [policyModalEl, formModalEl] = modalElList;
+const [policyModalEl, youtubeModalEl] = modalElList;
 const modalWrapperElList = document.querySelectorAll('.modal__center-wrapper');
 modalElList.forEach(modalEl => {
   modalEl.addEventListener('click', (e: Event) => {
     if (e.target === e.currentTarget || [...modalWrapperElList].includes(e.target as Element)) {
       const clickedModal = e.currentTarget as HTMLDivElement;
+      if (clickedModal === youtubeModalEl) {
+        const iframe = youtubeModalEl.querySelector('iframe');
+        if (iframe) {
+          const iframeSrc = iframe.src;
+          iframe.src = iframeSrc;
+        }
+      }
       closeModal(clickedModal);
     }
   });
@@ -44,9 +51,10 @@ policyBtnElList.forEach(el => {
   });
 });
 
-const modalCallBtnElList = document.querySelectorAll('.js-form-modal');
-modalCallBtnElList.forEach(el => {
+const youtubeBtnCallElList = document.querySelectorAll('.js-youtube-call');
+
+youtubeBtnCallElList.forEach(el => {
   el.addEventListener('click', () => {
-    openModal(formModalEl as HTMLDivElement);
+    openModal(youtubeModalEl as HTMLDivElement);
   });
 });

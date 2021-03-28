@@ -38,6 +38,11 @@
   line-height: 30px;
   color: white;
 
+  &:hover, &:focus {
+    color: white;
+    text-decoration: underline;
+  }
+
   &::before {
     content: url('/src/img/icons/phone.svg');
 

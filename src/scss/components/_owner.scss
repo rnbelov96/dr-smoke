@@ -51,6 +51,11 @@
   left: 20px;
   top: 100px;
 
+  @media (min-width: 1920px) {
+    left: -300px;
+    top: 0px;
+  }
+
   @media (max-width: 1350px) {
     position: relative;
     left: 0px;

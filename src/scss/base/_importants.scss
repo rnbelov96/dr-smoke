@@ -1,6 +1,4 @@
 .input-error {
-  border: solid #ce211f 1px;
-
   & + svg {
     path,
     rect {
@@ -8,7 +6,7 @@
     }
   }
 
-  color: #ce211f;
+  color: #ce211f !important;
 
   &::-webkit-input-placeholder {
     color: #ce211f;

@@ -24,7 +24,7 @@ const cellsEndpoints = [...document.querySelectorAll('.js-cells-endpoints .calc_
 const pointsEndpoints = [...document.querySelectorAll('.js-points-endpoints .calc__endpoint')];
 
 const calcResult = () => {
-  result = (Number(cellsRange.value) * Number(pointsRange.value) * Number(checkInput.value)) * 30;
+  result = (Number(cellsRange.value) * Number(pointsRange.value) * Number(checkInput.value)) * 0.147;
   resultLabelElList.forEach(el => {
     el.textContent = result.toLocaleString();
   });

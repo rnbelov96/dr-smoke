@@ -64,3 +64,13 @@
     content: '';
   }
 }
+
+.modal__video {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+
+  @media (max-width: 575px) {
+    width: 98%;
+  }
+}

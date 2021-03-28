@@ -1,0 +1,48 @@
+.potential {
+  min-height: 970px;
+  padding-top: 185px;
+
+  background-image: url("/src/img/bgs/potential-bg.jpg");
+  @include bg;
+
+  @media (max-width: 991px) {
+    background-image: url("/src/img/bgs/potential-without-hammer-bg.jpg");
+    min-height: 700px;
+    padding-top: 100px;
+  }
+
+  @media (max-width: 575px) {
+    padding-top: 50px;
+  }
+}
+
+.potential__title {
+  width: 100%;
+  max-width: 720px;
+  margin-bottom: 35px;
+
+  @include h2;
+  color: white;
+  text-transform: uppercase;
+
+  @media (max-width: 575px) {
+    font-size: 24px;
+  }
+}
+
+.potential__text {
+  width: 100%;
+  max-width: 720px;
+  margin-bottom: 60px;
+
+  @include h4;
+  color: white;
+
+  &_last {
+    max-width: 630px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 14px;
+  }
+}

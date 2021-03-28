@@ -3,6 +3,11 @@
 @import './base/variables.scss';
 @import './base/mixins.scss';
 @import './base/global.scss';
+@import './components/header.scss';
+@import './components/footer.scss';
+@import './components/modal.scss';
+@import './components/priv-policy.scss';
+@import './components/button.scss';
 
 .thanks,
 .error {
@@ -10,9 +15,7 @@
   display: flex;
   flex-direction: column;
   &__body {
-    @include bg;
-    // background-image: url('/src/img/bgs/desc-bg.png');
-    background-attachment: fixed;
+    background-color: $black;
   }
   &__body,
   &__html {
@@ -23,7 +26,7 @@
     padding-top: 20px;
   }
   .container {
-    max-width: 1144px;
+    max-width: 1410px;
   }
   footer {
     flex: 0 0 auto;
@@ -47,13 +50,13 @@
     font-size: 30px;
     font-weight: 500;
     text-align: center;
-    color: $black;
+    color: white;
   }
   &__user-name {
     text-transform: uppercase;
   }
   &__subtitle {
-    color: $black;
+    color: white;
     margin-top: 40px;
     font-size: 18px;
     text-align: center;

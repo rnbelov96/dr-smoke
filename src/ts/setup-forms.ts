@@ -14,7 +14,7 @@ formsList.forEach(form => {
   phoneInputEl.addEventListener('focus', () => {
     if (!phoneMask || phoneMask.unmaskedValue === '') {
       phoneMask = IMask(phoneInputEl, {
-        mask: '+7(000)000-00-00',
+        mask: '+7 (000) 000 0000',
         lazy: false,
       });
     }

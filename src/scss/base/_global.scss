@@ -11,10 +11,18 @@ body {
 
   &_brand {
     position: static;
+
+    @media (min-width: 1920px) {
+      position: relative;
+    }
   }
 
   &_owner {
     position: static;
+
+    @media (min-width: 1920px) {
+      position: relative;
+    }
   }
 
   @media (max-width: 1500px) {
