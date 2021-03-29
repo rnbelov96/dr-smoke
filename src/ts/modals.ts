@@ -16,14 +16,14 @@ const openModal = (modalEl: HTMLDivElement) => {
 };
 
 const modalElList = document.querySelectorAll('.modal');
-const [policyModalEl, youtubeModalEl] = modalElList;
+const [policyModalEl, youtubeDescModalEl, youtubeAdvModalEl] = modalElList;
 const modalWrapperElList = document.querySelectorAll('.modal__center-wrapper');
 modalElList.forEach(modalEl => {
   modalEl.addEventListener('click', (e: Event) => {
     if (e.target === e.currentTarget || [...modalWrapperElList].includes(e.target as Element)) {
       const clickedModal = e.currentTarget as HTMLDivElement;
-      if (clickedModal === youtubeModalEl) {
-        const iframe = youtubeModalEl.querySelector('iframe');
+      if (clickedModal === youtubeDescModalEl || clickedModal === youtubeAdvModalEl) {
+        const iframe = clickedModal.querySelector('iframe');
         if (iframe) {
           const iframeSrc = iframe.src;
           iframe.src = iframeSrc;
@@ -51,10 +51,14 @@ policyBtnElList.forEach(el => {
   });
 });
 
-const youtubeBtnCallElList = document.querySelectorAll('.js-youtube-call');
+const youtubeDescBtnCallEl = document.querySelector('.js-youtube-desc') as HTMLButtonElement;
 
-youtubeBtnCallElList.forEach(el => {
-  el.addEventListener('click', () => {
-    openModal(youtubeModalEl as HTMLDivElement);
-  });
+const youtubeAdvBtnCallEl = document.querySelector('.js-youtube-adv') as HTMLButtonElement;
+
+youtubeDescBtnCallEl.addEventListener('click', () => {
+  openModal(youtubeDescModalEl as HTMLDivElement);
+});
+
+youtubeAdvBtnCallEl.addEventListener('click', () => {
+  openModal(youtubeAdvModalEl as HTMLDivElement);
 });
