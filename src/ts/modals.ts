@@ -16,13 +16,13 @@ const openModal = (modalEl: HTMLDivElement) => {
 };
 
 const modalElList = document.querySelectorAll('.modal');
-const [policyModalEl, youtubeDescModalEl, youtubeAdvModalEl] = modalElList;
+const [policyModalEl, youtubeAdvModalEl] = modalElList;
 const modalWrapperElList = document.querySelectorAll('.modal__center-wrapper');
 modalElList.forEach(modalEl => {
   modalEl.addEventListener('click', (e: Event) => {
     if (e.target === e.currentTarget || [...modalWrapperElList].includes(e.target as Element)) {
       const clickedModal = e.currentTarget as HTMLDivElement;
-      if (clickedModal === youtubeDescModalEl || clickedModal === youtubeAdvModalEl) {
+      if (clickedModal === youtubeAdvModalEl) {
         const iframe = clickedModal.querySelector('iframe');
         if (iframe) {
           const iframeSrc = iframe.src;
@@ -51,13 +51,7 @@ policyBtnElList.forEach(el => {
   });
 });
 
-const youtubeDescBtnCallEl = document.querySelector('.js-youtube-desc') as HTMLButtonElement;
-
 const youtubeAdvBtnCallEl = document.querySelector('.js-youtube-adv') as HTMLButtonElement;
-
-youtubeDescBtnCallEl.addEventListener('click', () => {
-  openModal(youtubeDescModalEl as HTMLDivElement);
-});
 
 youtubeAdvBtnCallEl.addEventListener('click', () => {
   openModal(youtubeAdvModalEl as HTMLDivElement);
