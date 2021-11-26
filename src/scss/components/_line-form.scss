@@ -13,6 +13,10 @@
     padding-left: 20px;
     padding-right: 20px;
   }
+
+  &_desc {
+    margin-bottom: 25px;
+  }
 }
 
 .line-form__title {
@@ -21,6 +25,10 @@
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
+
+  &_desc {
+    max-width: 100%;
+  }
   
   @include h2;
   text-transform: uppercase;
