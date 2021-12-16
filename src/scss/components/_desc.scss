@@ -30,19 +30,11 @@
 }
 
 .desc__title {
+  width: 100%;
+  max-width: 538px;
   margin-bottom: 40px;
 
-  text-transform: uppercase;
-
-  @include h1;
-  color: white;
-
-  @media (max-width: 767px) {
-    font-size: 40px;
-  }
-
   @media (max-width: 575px) {
-    font-size: 23px;
     margin-bottom: 28px;
   }
 }
